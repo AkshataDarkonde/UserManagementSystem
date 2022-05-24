@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    font-family:sans-serif;
+    text-align: left;
+    column-span: 200px;
+}
+tr{
+}
+h2{
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

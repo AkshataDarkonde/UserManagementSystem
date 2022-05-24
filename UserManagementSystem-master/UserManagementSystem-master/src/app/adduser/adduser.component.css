@@ -1,0 +1,45 @@
+table{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    width: 30px;
+    background-color: white;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+button{
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 1px 5px 1px 5px;
+    text-align: center;
+    border-width: 5px;
+    border-color:firebrick;
+    border-radius: 5px;
+    border-style:outset;
+}
+body{
+    text-align: center;
+}
+input{
+    width: 320px;
+    height: 30px;
+    border-color: black;
+    border-radius: 8px;
+    border-spacing: 20px;
+}
+label{
+    font-size: 20px;
+}
+select{
+    width: 325px;
+    height: 30px;
+    background-color: white;
+}

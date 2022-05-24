@@ -1,0 +1,47 @@
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+    font-style:normal;
+    padding-top: 20px;
+}
+a{
+    text-align:left;
+    font-size: medium;
+    color: rgb(117, 170, 248);
+    text-shadow: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+img{
+
+    /* Full height */
+    height: 100%; 
+    width:100%;
+
+  }
+button{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: right;
+    margin-right: 10px;
+    border-style: hidden;
+    background-color: white;
+    border-width: 5px;
+}
+button:hover{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: right;
+    margin-right: 10px;
+    border-style:outset;
+    background-color:rgba(0, 132, 198, 0.712);
+    border-width: 0px;
+    border-radius: 6px;
+    padding: 4px 10px 4px 10px;
+}

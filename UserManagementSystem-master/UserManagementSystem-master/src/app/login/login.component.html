@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <br><br><br><br>
+      <form #userLogin="ngForm" [formGroup]="loginForm" (ngSubmit)="login(userLogin.value)" [ngModel]>
+        <div><br>
+          <table class="center">
+            <tr>
+              <th colspan="2">
+                <h3><img src="assets/image6.png"><b>  Login</b></h3>
+              </th>
+            </tr><br>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="email">Username<label style="color: red;">*</label>:</label>
+              </td>
+              <td>
+                <input type="email" name="email" placeholder="Enter your email id" formControlName="email" [ngModel]><br>
+                <span style="color: red;" *ngIf="email && email.invalid && email.touched">This field is invalid.</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="password">Password<label style="color: red;">*</label> :</label>
+              </td>
+              <td>
+                <input  type="password" name="password" placeholder="Enter your password" formControlName="password" [ngModel]><br>
+                <span style="color: red;" *ngIf="password && password.invalid && password.touched" >This field is invalid.</span>
+                <br>
+              </td>
+            </tr>
+          </table>
+          <br><br>
+         
+        </div>
+        <button class="btn btn secondary" [disabled]="loginForm.invalid" (click)="login(userLogin.value)">Login</button><br><br>
+        <span>Don't have an account?
+        <a (click)="register()">Register</a></span>
+        
+      </form>
+      <!-- <app-user-list *ngIf="k"></app-user-list> -->
+      <app-options *ngIf="k"></app-options>
+      <!-- <router-outlet></router-outlet> -->
+</body>
+</html>

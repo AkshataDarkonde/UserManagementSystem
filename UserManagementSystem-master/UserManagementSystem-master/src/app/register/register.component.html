@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+</head>
+<body>
+  <div>
+    <router-outlet></router-outlet>
+    <br>
+      <h1><img src="assets/image11.jpg"><b>  Create An Account</b></h1><br><br>
+       <form #userRegister="ngForm" [formGroup]="registerForm" (ngSubmit)="register(userRegister.value)" [ngModel]>
+        <table class="center">
+          <tr>
+            <td>
+              <label for="email"></label>UserName<label style="color: red;">* :</label>
+            </td>
+            <td>
+              <input type="email" name="email" placeholder="Enter your email id" formControlName="email" [(ngModel)]="user.email"><br>
+              <span style="color: red;" *ngIf="email && email.invalid && email.touched">This field is invalid.</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="firstname">First Name :</label>
+            </td>
+            <td>
+              <input type="text" name="firstname" placeholder="Enter your FirstName" formControlName="firstname" [(ngModel)]="user.firstname"><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lastname">Last Name :</label>
+            </td>
+            <td>
+              <input type="text" name="lastname" placeholder="Enter your LastName" formControlName="lastname" [(ngModel)]="user.lastname"><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="age">Age :</label>
+            </td>
+            <td>
+              <input type="number" name="age" placeholder="Enter your age" formControlName="age" [(ngModel)]="user.age"><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="role">Role :</label>
+            </td>
+            <td>
+              <select name="role" formControlName="role" [(ngModel)]="user.role">
+                <option value="USER">User</option>
+              </select><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Password<label style="color: red;">*</label> :</label>
+            </td>
+            <td>
+              <input  type="password" name="password" placeholder="Enter your password" formControlName="password" [(ngModel)]="user.password"><br>
+              <span style="color: red;" *ngIf="password && password.invalid && password.touched" >This field is invalid.</span>
+              <span style="color: red;" *ngIf=""></span>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Confirm Password<label style="color: red;">*</label> :</label>
+            </td>
+            <td>
+              <input  type="password" name="confirmpassword" placeholder="Re-Enter password" formControlName="confirmpassword" [ngModel]><br>
+              <span style="color: red;" *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched" >Should match with above password.</span>
+              <br>
+            </td>
+          </tr>
+        </table><br><br>
+        <button class="btn btn secondary" [disabled]="registerForm.invalid" (click)="register(userRegister.value)">Register</button><br>
+        <br>
+         <span>Already have an account? 
+         <a (click)="login()">Login</a></span>
+       </form>
+   </div>
+</body>
+</html>

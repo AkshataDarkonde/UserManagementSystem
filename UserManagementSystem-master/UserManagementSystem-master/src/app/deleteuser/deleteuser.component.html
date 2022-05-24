@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+</head>
+<body>
+
+    <div>
+        <br><br>
+        <router-outlet></router-outlet>
+        <h2 *ngIf="k" routerLink="success">!!!!! Deleted Successfully !!!!!</h2>
+        <br>
+        <h1><img src="assets/image10.jpg"><b>  Delete the User</b></h1><br><br>
+        <form #userDel="ngForm" [formGroup]="delForm" (ngSubmit)="deleteUser(userDel.value)" [ngModel]>
+            <table class="center">
+                <tr>
+                    <td>
+                        <label for="userId">Id<label style="color: red;">* </label>:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="userId" formControlName="userId" placeholder="Enter the id" [(ngModel)]="user.userId"><br>
+                        <span style="color: red;" *ngIf="userId && userId.invalid && userId.touched"></span>
+                    </td>
+                </tr>
+            </table><br><br>
+            <button class="btn btn secondary" [disabled]="delForm.invalid" (click)="deleteUser(userDel.value)">Delete</button><br>
+            <br>
+        </form>
+    </div>
+    <!-- <app-success *ngIf="k"></app-success> -->
+</body>
+</html>

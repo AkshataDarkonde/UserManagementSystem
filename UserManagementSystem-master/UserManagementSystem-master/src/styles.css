@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+html, 
+/* body { height: 100%; } */
+body { margin: 0; font-family:Georgia, 'Times New Roman', Times, serif; 
+/* background-color:rgb(206, 200, 200); */
+background-image: url("assets/background.jpg");
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size: auto;
+background-position: center;
+/* margin-left: 3px;
+margin-right: 3px; */
+margin: 2px 3px 0px 3px;
+
+}
+

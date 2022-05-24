@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+</head>
+<body>
+    <br><br>
+    <div>
+      <router-outlet></router-outlet>
+      <h2 *ngIf="k" routerLink="success">!!!!! Added Successfully !!!!!</h2>
+          <h1><img src="assets/image11.jpg"><b>   Add a User</b></h1><br>
+           <form #userAdd="ngForm" [formGroup]="addForm" (ngSubmit)="addUser(userAdd.value)" [ngModel]>
+            <table class="center">
+              <tr>
+                <td>
+                  <label for="email">UserName<label style="color: red;">* </label>:</label>
+                </td>
+                <td>
+                  <input type="email" name="email" placeholder="Enter your email id" formControlName="email" [(ngModel)]="user.email"><br>
+                  <span style="color: red;" *ngIf="email && email.invalid && email.touched">This field is invalid.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="firstname">First Name :</label>
+                </td>
+                <td>
+                  <input type="text" name="firstname" placeholder="Enter your FirstName" formControlName="firstname" [(ngModel)]="user.firstname"><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="lastname">Last Name :</label>
+                </td>
+                <td>
+                  <input type="text" name="lastname" placeholder="Enter your LastName" formControlName="lastname" [(ngModel)]="user.lastname"><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="age">Age :</label>
+                </td>
+                <td>
+                  <input type="number" name="age" placeholder="Enter your age" formControlName="age" [(ngModel)]="user.age"><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="role">Role :</label>
+                </td>
+                <td>
+                  <select name="role" formControlName="role" [(ngModel)]="user.role">
+                    <option value="USER">User</option>
+                  </select><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="password">Password<label style="color: red;">*</label> :</label>
+                </td>
+                <td>
+                  <input  type="password" name="password" placeholder="Enter your password" formControlName="password" [(ngModel)]="user.password"><br>
+                  <span style="color: red;" *ngIf="password && password.invalid && password.touched" >This field is invalid.</span>
+                  <br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="password">Confirm Password<label style="color: red;">*</label> :</label>
+                </td>
+                <td>
+                  <input  type="password" name="confirmpassword" placeholder="Re-Enter password" formControlName="confirmpassword" [ngModel]><br>
+                  <span style="color: red;" *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched" >Should match with above password.</span>
+                  <br>
+                </td>
+              </tr>
+            </table><br>
+            <button class="btn btn secondary" [disabled]="addForm.invalid" (click)="addUser(userAdd.value)">AddUser</button><br>
+            <br>
+           </form>
+        </div>
+
+</body>
+</html>

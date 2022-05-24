@@ -1,0 +1,70 @@
+div{
+    text-align: center;
+}
+body{
+    text-align: center;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+table{
+    font-size: larger;
+    text-align: left;
+    font-weight: bold;
+    border-width: 20px;
+    height: 200px;
+    border-collapse: collapse;
+}
+th{
+    border: 20px solid darkolivegreen;
+    background-color: darkolivegreen;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+td{
+    border:20px solid darkblue;
+    background-color:darkblue;
+    width:150px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    border-color: black;
+    border-radius: 8px;
+}
+button{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    border-color:darkgray;
+    border-width: 5px;
+    width: 80px;
+    /* background-color:darkgrey; */
+}
+button:hover{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    border-color:darkolivegreen;
+    color: white;
+    border-width: 5px;
+    width: 80px;
+    background-color:darkolivegreen;
+}
+span{
+    font-size: medium;
+}
+img{
+    width: 25px;
+    background-color: white;
+}
+label{
+    color: white;
+}

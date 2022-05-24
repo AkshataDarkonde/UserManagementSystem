@@ -1,0 +1,44 @@
+div{
+    text-align: center;
+}
+body{
+    text-align: center;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+table{
+    font-size: larger;
+    text-align: left;
+    font-weight: bold;
+}
+input{
+    width: 300px;
+    height: 30px;
+    border-color: black;
+    border-radius: 8px;
+}
+button{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    border-color:mediumblue;
+    border-width: 4px;
+}
+span{
+    font-size: medium;
+}
+img{
+    width: 30px;
+    background-color: white;
+}
+select{
+    width: 305px;
+    height: 30px;
+    background-color: white;
+}
